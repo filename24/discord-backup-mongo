@@ -4,7 +4,10 @@
   "description": "A Simple mongodb atlas db",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd test && nodemon test.js",
+    "lint": "eslint . ",
+    "lint:commands": "eslint ./test/ --no-ignore",
+    "lint:fix": "eslint --fix"
   },
   "repository": {
     "type": "git",
@@ -19,5 +22,13 @@
   "devDependencies": {
     "eslint": "^7.28.0",
     "nodemon": "^2.0.7"
-  }
+  },
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "mongodb": "^3.6.9",
+    "node-fetch": "^2.6.1"
+  },
+  "eslintIgnore": [
+    "/test/*"
+  ]
 }
